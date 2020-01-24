@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lotsofone.NBT", "lotsofone.NBT\lotsofone.NBT.csproj", "{70B7E2E7-4532-46E9-A113-A7FB520837CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70B7E2E7-4532-46E9-A113-A7FB520837CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B7E2E7-4532-46E9-A113-A7FB520837CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B7E2E7-4532-46E9-A113-A7FB520837CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B7E2E7-4532-46E9-A113-A7FB520837CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {bce687ed-6f4d-46cb-95de-9f0ecf92cbeb}%
+	EndGlobalSection
+EndGlobal
