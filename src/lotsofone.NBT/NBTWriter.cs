@@ -137,6 +137,35 @@ namespace lotsofone.NBT
         {
             WriteHalf(TagType.Double, name); WriteDouble(value);
         }
+        public void WriteTag(string name, byte[] value)
+        {
+            WriteHalf(TagType.ByteArray, name); WriteByteArray(value);
+        }
+        public void WriteTag(string name, string value)
+        {
+            WriteHalf(TagType.String, name); WriteString(value);
+        }
+        public void WriteTag(string name, List<NamedBinaryTag> value)
+        {
+            WriteHalf(TagType.List, name);
+            if (value == null || value.Count == 0)
+            {
+                WriteTagEnd(); WriteInt(0);
+            }
+            WriteList(value, value[0].Type);
+        }
+        public void WriteTag(string name, Dictionary<string, NamedBinaryTag> value)
+        {
+            WriteHalf(TagType.Compound, name); WriteCompound(value);
+        }
+        public void WriteTag(string name, int[] value)
+        {
+            WriteHalf(TagType.IntArray, name); WriteIntArray(value);
+        }
+        public void WriteTag(string name, long[] value)
+        {
+            WriteHalf(TagType.LongArray, name); WriteLongArray(value);
+        }
         #endregion
         #region WriteValue
         BinaryWriter _leWriter;
