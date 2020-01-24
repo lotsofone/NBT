@@ -7,7 +7,7 @@ namespace lotsofone.NBT
 {
     public abstract class NamedBinaryTag
     {
-        public string name;
+        public string name = "";
         public TagType Type => GetTagType();
         public abstract TagType GetTagType();
 
@@ -149,7 +149,7 @@ namespace lotsofone.NBT
     {
         TagType _itemType;
         List<NamedBinaryTag> value;
-        public NamedBinaryTagList() { value = new List<NamedBinaryTag>(); }
+        public NamedBinaryTagList(string name = "") { this.name = name; value = new List<NamedBinaryTag>(); }
         public NamedBinaryTagList(string name, List<NamedBinaryTag> value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.List;
         public override TagType GetItemType()
@@ -183,7 +183,7 @@ namespace lotsofone.NBT
     public class NamedBinaryTagCompound : NamedBinaryTag
     {
         Dictionary<string, NamedBinaryTag> value;
-        public NamedBinaryTagCompound() { value = new Dictionary<string, NamedBinaryTag>(); }
+        public NamedBinaryTagCompound(string name = "") { this.name = name; value = new Dictionary<string, NamedBinaryTag>(); }
         public NamedBinaryTagCompound(string name, Dictionary<string, NamedBinaryTag> value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Compound;
         public override Dictionary<string, NamedBinaryTag> GetCompound() => value;
