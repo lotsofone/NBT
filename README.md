@@ -107,3 +107,11 @@ while((tag = reader.ReadNext()).Type != TagType.End)
 }
 ```
 The ReadHobbies method
+```
+NamedBinaryTag tag;
+hobbies.Clear();
+while ((tag = reader.ReadNext()).Type != TagType.End)
+{
+    hobbies.Add(tag.GetString());
+}
+```
