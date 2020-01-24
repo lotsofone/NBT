@@ -13,8 +13,7 @@ The simplist way of usage is to Deserialize a stream into an NBT tree or Seriali
 ```
 NamedBinaryTag nbtTree = new NamedBinaryTagCompound();
 nbtTree.name = "Andy";
-var a = nbtTree.GetCompound();//null is returned for new tag
-a = new Dictionary<string, NamedBinaryTag>();
+var a = nbtTree.GetCompound();
 NamedBinaryTag newTag;
 newTag = NamedBinaryTag.Create(TagType.Int); newTag.name = "height" ; newTag.SetInt(168); a.Add(newTag.name, newTag);
 newTag = NamedBinaryTag.Create(TagType.Int); newTag.name = "weight"; newTag.SetInt(60); a.Add(newTag.name, newTag);
