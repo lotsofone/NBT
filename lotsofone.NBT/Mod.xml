@@ -9,7 +9,7 @@
 	<Name>lotsofone.NBT</Name>
 	<Author>lotsofone</Author> <!-- FIX: Insert your name here. -->
 	<!-- Major.Minor.Build -->
-	<Version>0.0.2</Version>
+	<Version>0.1.0</Version>
 	
 	<Description>
 A library for reading and writing named binary tag files. <!-- FIX: Insert a short description here. -->
