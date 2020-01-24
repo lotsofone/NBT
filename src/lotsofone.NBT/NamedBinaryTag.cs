@@ -76,6 +76,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagByte : NamedBinaryTag
     {
         byte value;
+        public NamedBinaryTagByte() { }
+        public NamedBinaryTagByte(string name, byte value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Byte;
         public override byte GetByte() => value;
         public override void SetByte(byte value) => this.value = value;
@@ -83,6 +85,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagShort : NamedBinaryTag
     {
         short value;
+        public NamedBinaryTagShort() { }
+        public NamedBinaryTagShort(string name, short value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Short;
         public override short GetShort() => value;
         public override void SetShort(short value) => this.value = value;
@@ -90,6 +94,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagInt : NamedBinaryTag
     {
         int value;
+        public NamedBinaryTagInt() { }
+        public NamedBinaryTagInt(string name, int value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Int;
         public override int GetInt() => value;
         public override void SetInt(int value) => this.value = value;
@@ -97,6 +103,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagLong : NamedBinaryTag
     {
         long value;
+        public NamedBinaryTagLong() { }
+        public NamedBinaryTagLong(string name, long value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Long;
         public override long GetLong() => value;
         public override void SetLong(long value) => this.value = value;
@@ -104,6 +112,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagFloat : NamedBinaryTag
     {
         float value;
+        public NamedBinaryTagFloat() { }
+        public NamedBinaryTagFloat(string name, float value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Float;
         public override float GetFloat() => value;
         public override void SetFloat(float value) => this.value = value;
@@ -111,6 +121,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagDouble : NamedBinaryTag
     {
         double value;
+        public NamedBinaryTagDouble() { }
+        public NamedBinaryTagDouble(string name, double value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Double;
         public override double GetDouble() => value;
         public override void SetDouble(double value) => this.value = value;
@@ -118,6 +130,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagByteArray : NamedBinaryTag
     {
         byte[] value;
+        public NamedBinaryTagByteArray() { }
+        public NamedBinaryTagByteArray(string name, byte[] value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.ByteArray;
         public override byte[] GetByteArray() => value;
         public override void SetByteArray(byte[] value) => this.value = value;
@@ -125,6 +139,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagString : NamedBinaryTag
     {
         string value;
+        public NamedBinaryTagString() { }
+        public NamedBinaryTagString(string name, string value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.String;
         public override string GetString() => value;
         public override void SetString(string value) => this.value = value;
@@ -133,6 +149,8 @@ namespace lotsofone.NBT
     {
         TagType _itemType;
         List<NamedBinaryTag> value;
+        public NamedBinaryTagList() { value = new List<NamedBinaryTag>(); }
+        public NamedBinaryTagList(string name, List<NamedBinaryTag> value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.List;
         public override TagType GetItemType()
         {
@@ -165,6 +183,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagCompound : NamedBinaryTag
     {
         Dictionary<string, NamedBinaryTag> value;
+        public NamedBinaryTagCompound() { value = new Dictionary<string, NamedBinaryTag>(); }
+        public NamedBinaryTagCompound(string name, Dictionary<string, NamedBinaryTag> value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.Compound;
         public override Dictionary<string, NamedBinaryTag> GetCompound() => value;
         public override void SetCompound(Dictionary<string, NamedBinaryTag> value) => this.value = value;
@@ -172,6 +192,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagIntArray : NamedBinaryTag
     {
         int[] value;
+        public NamedBinaryTagIntArray() { }
+        public NamedBinaryTagIntArray(string name, int[] value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.IntArray;
         public override int[] GetIntArray() => value;
         public override void SetIntArray(int[] value) => this.value = value;
@@ -179,6 +201,8 @@ namespace lotsofone.NBT
     public class NamedBinaryTagLongArray : NamedBinaryTag
     {
         long[] value;
+        public NamedBinaryTagLongArray() { }
+        public NamedBinaryTagLongArray(string name, long[] value) { this.name = name; this.value = value; }
         public override TagType GetTagType() => TagType.LongArray;
         public override long[] GetLongArray() => value;
         public override void SetLongArray(long[] value) => this.value = value;

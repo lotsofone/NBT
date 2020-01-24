@@ -248,6 +248,10 @@ namespace lotsofone.NBT
         }
         public void WriteByteArray(byte[] value)
         {
+            if (value == null)
+            {
+                WriteInt(0); return;
+            }
             WriteInt(value.Length);
             _stream.Write(value, 0, value.Length);
         }
@@ -277,6 +281,10 @@ namespace lotsofone.NBT
         public void WriteList(List<NamedBinaryTag> value, TagType itemType)
         {
             WriteTagType(itemType);
+            if (value == null)
+            {
+                WriteInt(0); return;
+            }
             WriteInt(value.Count);
             foreach(var tag in value)
             {
@@ -286,6 +294,10 @@ namespace lotsofone.NBT
         }
         public void WriteCompound(Dictionary<string, NamedBinaryTag> value)
         {
+            if (value == null)
+            {
+                WriteTagEnd(); return;
+            }
             foreach(var pair in value){
                 WriteHalf(pair.Value.Type, pair.Key);
                 WriteTagValue(pair.Value);
@@ -294,6 +306,10 @@ namespace lotsofone.NBT
         }
         public void WriteIntArray(int[] value)
         {
+            if (value == null)
+            {
+                WriteInt(0); return;
+            }
             WriteInt(value.Length);
             foreach(int v in value)
             {
@@ -302,6 +318,10 @@ namespace lotsofone.NBT
         }
         public void WriteLongArray(long[] value)
         {
+            if (value == null)
+            {
+                WriteInt(0); return;
+            }
             WriteInt(value.Length);
             foreach (long v in value)
             {

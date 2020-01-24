@@ -9,7 +9,7 @@
 	<Name>lotsofone.NBT</Name>
 	<Author>lotsofone</Author> <!-- FIX: Insert your name here. -->
 	<!-- Major.Minor.Build -->
-	<Version>0.0.1</Version>
+	<Version>0.0.2</Version>
 	
 	<Description>
 A library for reading and writing named binary tag files. <!-- FIX: Insert a short description here. -->
@@ -18,7 +18,7 @@ A library for reading and writing named binary tag files. <!-- FIX: Insert a sho
 	<LoadOrder>-30000</LoadOrder>
 	<!-- Square icon of the mod. Texture defined in the Resources section.
 		 This is displayed in the mod list and, if WorkshopThumbnail is not set, used as thumbnail when uploaded to the Steam workshop. -->
-	<!-- <Icon name="icon" /> -->
+	<Icon name="icon" />
 	
 	<!-- Texture resource used as thumbnail when uploading the mod to the workshop.
 		 If this is not present, the Icon texture is used instead.
@@ -121,7 +121,7 @@ A library for reading and writing named binary tag files. <!-- FIX: Insert a sho
 		 Available resource types are Mesh, Texture, AudioClip, and AssetBundle. -->
 	<Resources>
 		<!-- <Mesh name="some-mesh-name" path="some_mesh_file.obj" /> -->
-		<!-- <Texture name="some-texture-name" path="some_texture_file.png" /> -->
+		<Texture name="icon" path="Icon.png" />
 	</Resources>
 
 
