@@ -246,6 +246,36 @@ namespace lotsofone.NBT
             return _buffer[0];
         }
         #endregion
+        #region bigger value
+
+        public Vector3 ReadByteArrayOfVector3LE()
+        {
+            ReadInt();
+            return ReadVector3LE();
+        }
+        public Vector2 ReadByteArrayOfVector2LE()
+        {
+            ReadInt();
+            return ReadVector2LE();
+        }
+        public Quaternion ReadByteArrayOfQuaternionLE()
+        {
+            ReadInt();
+            return ReadQuaternionLE();
+        }
+        public Vector3 ReadVector3LE()
+        {
+            return new Vector3(ReadFloatLE(), ReadFloatLE(), ReadFloatLE());
+        }
+        public Vector2 ReadVector2LE()
+        {
+            return new Vector2(ReadFloatLE(), ReadFloatLE());
+        }
+        public Quaternion ReadQuaternionLE()
+        {
+            return new Quaternion(ReadFloatLE(), ReadFloatLE(), ReadFloatLE(), ReadFloatLE());
+        }
+        #endregion
         #region IDisposable Support
         private bool disposedValue = false; // 要检测冗余调用
 

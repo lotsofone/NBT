@@ -167,6 +167,20 @@ namespace lotsofone.NBT
             WriteHalf(TagType.LongArray, name); WriteLongArray(value);
         }
         #endregion
+        #region bigger tags
+        public void WriteTagLE(string name, Vector3 v)
+        {
+            WriteHalf(TagType.ByteArray, name); WriteByteArrayOfVector3LE(v);
+        }
+        public void WriteTagLE(string name, Vector2 v)
+        {
+            WriteHalf(TagType.ByteArray, name); WriteByteArrayOfVector2LE(v);
+        }
+        public void WriteTagLE(string name, Quaternion q)
+        {
+            WriteHalf(TagType.ByteArray, name); WriteByteArrayOfQuaternionLE(q);
+        }
+        #endregion
         #region WriteValue
         BinaryWriter _leWriter;
         public void WriteFloatLE(float value)
@@ -327,6 +341,32 @@ namespace lotsofone.NBT
             {
                 WriteLong(v);
             }
+        }
+        #endregion
+        #region bigger value
+        public void WriteByteArrayOfVector3LE(Vector3 v)
+        {
+            WriteInt(12); WriteVector3LE(v);
+        }
+        public void WriteByteArrayOfVector2LE(Vector2 v)
+        {
+            WriteInt(8); WriteVector2LE(v);
+        }
+        public void WriteByteArrayOfQuaternionLE(Quaternion q)
+        {
+            WriteInt(16); WriteQuaternionLE(q);
+        }
+        public void WriteVector3LE(Vector3 v)
+        {
+            WriteFloatLE(v.x); WriteFloatLE(v.y); WriteFloatLE(v.z);
+        }
+        public void WriteVector2LE(Vector2 v)
+        {
+            WriteFloatLE(v.x); WriteFloatLE(v.y);
+        }
+        public void WriteQuaternionLE(Quaternion q)
+        {
+            WriteFloatLE(q.x); WriteFloatLE(q.y); WriteFloatLE(q.z); WriteFloatLE(q.w);
         }
         #endregion
         public void Write(byte[] buffer, int offset, int count)
